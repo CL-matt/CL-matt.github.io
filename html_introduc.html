@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata about the document -->
+    <meta charset="UTF-8"> <!-- Defines the character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the page responsive -->
+    <meta name="description" content="Introduction to HTML"> <!-- Description for search engines -->
+    <title>Introduction to HTML</title> <!-- The title of the page (appears in the browser tab) -->
+    <style>
+        /* Inline CSS for styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to HTML</h1>
+        <p>Learn the basics of HTML structure and elements</p>
+        <!-- Navigation Menu -->
+        <nav>
+            <ul>
+                <li><a href="#structure">Structure</a></li>
+                <li><a href="#elements">Elements</a></li>
+                <li><a href="#attributes">Attributes</a></li>
+                <li><a href="#styling">Styling</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Section: Structure -->
+        <section id="structure">
+            <h2>HTML Structure</h2>
+            <p>HTML documents are structured using elements. The basic structure includes:</p>
+            <pre>
+&lt;!DOCTYPE html&gt; <!-- Declares the document type -->
+&lt;html&gt; <!-- Root element -->
+    &lt;head&gt; <!-- Metadata and links -->
+        &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt; <!-- Visible content -->
+        &lt;h1&gt;Hello, World!&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+        </section>
+
+        <!-- Section: Elements -->
+        <section id="elements">
+            <h2>HTML Elements</h2>
+            <p>HTML elements are the building blocks of a webpage. Examples include:</p>
+            <ul>
+                <li><strong>Headings:</strong> <code>&lt;h1&gt; to &lt;h6&gt;</code></li>
+                <li><strong>Paragraphs:</strong> <code>&lt;p&gt;</code></li>
+                <li><strong>Links:</strong> <code>&lt;a href="url"&gt;</code></li>
+                <li><strong>Images:</strong> <code>&lt;img src="image.jpg" alt="description"&gt;</code></li>
+                <li><strong>Lists:</strong> <code>&lt;ul&gt;</code> (unordered) and <code>&lt;ol&gt;</code> (ordered)</li>
+            </ul>
+        </section>
+
+        <!-- Section: Attributes -->
+        <section id="attributes">
+            <h2>HTML Attributes</h2>
+            <p>Attributes provide additional information about elements. Examples:</p>
+            <ul>
+                <li><strong>href:</strong> Specifies the URL for a link.</li>
+                <li><strong>src:</strong> Specifies the source of an image.</li>
+                <li><strong>alt:</strong> Provides alternative text for an image.</li>
+                <li><strong>id:</strong> Assigns a unique identifier to an element.</li>
+                <li><strong>class:</strong> Assigns a class name for styling.</li>
+            </ul>
+        </section>
+
+        <!-- Section: Styling -->
+        <section id="styling">
+            <h2>Styling HTML</h2>
+            <p>HTML can be styled using CSS. There are three ways to apply CSS:</p>
+            <ol>
+                <li><strong>Inline:</strong> Inside the element using the <code>style</code> attribute.</li>
+                <li><strong>Internal:</strong> Inside a <code>&lt;style&gt;</code> tag in the <code>&lt;head&gt;</code>.</li>
+                <li><strong>External:</strong> Linking to an external CSS file using <code>&lt;link&gt;</code>.</li>
+            </ol>
+            <p>Example of inline styling:</p>
+            <pre>
+&lt;p style="color: red;"&gt;This is red text.&lt;/p&gt;
+            </pre>
+        </section>
+        
+        <form type="text" aria-placeholder="input">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name">
+            <!-- 不可视 -->
+            <label for="pwd">pwd:</label>
+            <input type="password" id="pwd" name="pwd" placeholder="Enter your pwd">
+            <!-- 单选 -->
+            <label for="gender">gender:</label>
+            <input type="radio" name="gender">男
+            <input type="radio" name="gender">女
+            <input type="radio" name="gender">其他
+            <!-- 多选 -->
+            <label for="">多选</label>
+            <input type="checkbox" name="">1
+            <input type="checkbox" name="">2
+            <input type="checkbox" name="">3
+            <input type="checkbox" name="">4
+
+            <input type="submit" value="Submit">
+        </form>
+        <form action="#"></form> <!-- 提交form-->
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 HTML Basics. All rights reserved.</p>
+    </footer>
+</body>
+</html>
