@@ -162,6 +162,16 @@ main h2 {
     transform: scale(1.1); /* Enlarge the model-viewer on hover */
 }
 
+.carousel-video {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    outline: none;
+    display: block;
+    margin: 0 auto;
+}
+
 /* Navigation Buttons */
 .carousel-control {
     position: absolute;
