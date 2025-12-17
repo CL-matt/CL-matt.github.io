@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading Article</title>
+    
+    <link rel="stylesheet" href="../styles/styles.articles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown.min.css">
+
+    <style>
+        /* 限制文章宽度，居中显示 */
+        .markdown-body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 45px;
+        }
+        /* 手机适配 */
+        @media (max-width: 767px) {
+            .markdown-body { padding: 15px; }
+        }
+        /* 返回按钮样式 */
+        .back-link {
+            display: block;
+            max-width: 980px;
+            margin: 20px auto 0;
+            padding: 0 45px;
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <a href="blog.html" class="back-link">Back to Blog List</a>
+
+    <main>
+        <article id="content" class="markdown-body">
+            Loading...
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 CLMatt. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <script>
+        // 1. 获取 URL 中的 id 参数 (比如 ?id=post2)
+        const params = new URLSearchParams(window.location.search);
+        const postId = params.get('id');
+
+        // 2. 如果没有 ID，就报错或者跳回首页
+        if (!postId) {
+            document.getElementById('content').innerHTML = "<h1>Error: No article specified.</h1>";
+        } else {
+            // 3. 拼接路径：去 'articles' 文件夹找对应的 md 文件
+            const filePath = `../articles/${postId}.md`;
+
+            // 4. Fetch 加载文件
+            fetch(filePath)
+                .then(response => {
+                    if (!response.ok) throw new Error("Article not found");
+                    return response.text();
+                })
+                .then(text => {
+                    // 5. 渲染 Markdown
+                    document.getElementById('content').innerHTML = marked.parse(text);
+                    // 修改网页标题
+                    document.title = postId + " - My Blog";
+                })
+                .catch(error => {
+                    document.getElementById('content').innerHTML = `<h1>404 Not Found</h1><p>Sorry, the article "${postId}" could not be found.</p>`;
+                });
+        }
+    </script>
+
+    <script src="https://giscus.app/client.js"
+        data-repo="CL-matt/aboutme"
+        data-repo-id="R_kgDOOa4KUg"
+        data-category="General"
+        data-category-id="DIC_kwDOOa4KUs4Cz7xS"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+    </script>
+
+</body>
+</html>

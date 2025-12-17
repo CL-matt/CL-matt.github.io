@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kukisch Language Manual - The official guide for the K.u.K. Army.">
+    <title>Project Kukisch (DK-1) Manual</title>
+    
+    <link rel="stylesheet" href="../styles/styles.blog.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown.min.css">
+
+    <style>
+        /* 一些额外的微调，防止样式库影响你的导航栏 */
+        .markdown-body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* 保持你的页脚和导航栏风格 */
+        footer { margin-top: 50px; text-align: center; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../articles.html">Articles</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <article>
+            <section id="markdown-content" class="markdown-body">
+                <p>Loading documentation...</p>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2023-2025 CLMatt. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <script>
+        // 5. 这里放入我刚才为你精修的 Markdown 内容
+        // 使用反引号 ` 包裹，可以随意换行
+        const markdownText = `
+# 🦅 Project DK-1: Kukisch (库克语)
+
+> **📁 文档编号:** K.u.K-Manual-1918-Alpha
+> **🏛️ 归属部门:** 帝国战争部 (Kriegsministerium)
+> **🔒 密级:** 仅限现役军人 (For Service Use Only)
+
+---
+
+## 📖 1. 简介 (Introduction)
+
+**Kukisch** (Danubis-Kukisch) 是为奥匈帝国皇家军队设计的标准化辅助语。
+它的核心设计哲学是：**像德国人一样吼叫，像斯拉夫人一样断句。**
+
+### 核心三铁律 (The 3 Iron Rules)
+1.  **名词不变格：** 依靠前置词 \`De\` / \`Des\` 区分单复数。
+2.  **动词统一化：** 所有动词后缀均为 \`-ir\`，无视人称。
+3.  **发音硬化：** 废除变音符号 (\`ü\`, \`ö\`)，强化辅音。
+
+---
+
+## 🧱 3. 语法架构 (Grammar Grid)
+
+### 3.1 名词与限定词 (Nouns)
+名词永远保持原形。
+
+| 功能 | 标记词 (Marker) | 语法结构 | 示例 |
+| :--- | :--- | :--- | :--- |
+| **单数** | \`De\` | \`De\` + 名词 | \`De Soldat\` (那个士兵) |
+| **复数** | \`Des\` | \`Des\` + 名词 | \`Des Soldat\` (那些士兵) |
+| **属格** | \`Fon\` | \`Fon\` + 对象 | \`Fon de Kaisar\` (皇帝的) |
+
+---
+
+## 👮 4. 代词与阶级礼仪 (Protocol)
+
+Kukisch 严格反映军队阶级。误用代词将受到军法处置。
+
+| 人称 | 单数 | 复数 (\`-ri\`) |
+| :--- | :--- | :--- |
+| **第一人称** | \`Mi\` | \`Miri\` |
+| **第二人称** | \`Du\` | \`Duri\` |
+| **尊称** | **\`Ir\`** | - |
+
+> ⚠️ **严重警告 (WARNING)**
+> * **向上级说话:** 士兵 **严禁** 使用 \`Du\` 或 \`Ir\`。必须使用 **"Her + 军衔"** 作为主语。
+
+---
+
+## 📝 7. 示例文本 (Sample)
+
+**场景:** 1918年11月，前线绝密电报。
+
+> **原文:** "An Ekselenz... De Front ist kaput. Miri musir kapitulir."
+> **译文:** 致阁下... 前线崩溃了。我们必须投降。
+
+`;
+
+        // 6. 执行转换：把 Markdown 变成 HTML 并塞进页面
+        document.getElementById('markdown-content').innerHTML = marked.parse(markdownText);
+    </script>
+</body>
+</html>

@@ -1,0 +1,343 @@
+/* =========================================
+   1. 变量定义 (Variables) - 方便后续换色
+   ========================================= */
+:root {
+    --primary-color: #2c3e50;      /* 深蓝灰 - 标题和页脚 */
+    --accent-color: #e67e22;       /* 活力橙 - 链接悬停 */
+    --text-color: #4a4a4a;         /* 正文灰 - 这种灰色比纯黑更护眼 */
+    --bg-color: #f0f2f5;           /* 背景色 - 浅灰冷色调 */
+    --paper-bg: #ffffff;           /* 纸张颜色 */
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.07);
+    --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+    --font-serif: 'Merriweather', 'Georgia', serif; /* 推荐引入 Google Font Merriweather，或者回退到 Georgia */
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* =========================================
+   2. 全局重置 (Global Reset)
+   ========================================= */
+* {
+    box-sizing: border-box; /* 这是一个好习惯，防止padding撑破布局 */
+}
+
+body {
+    font-family: var(--font-serif);
+    line-height: 1.8; /* 增加行高，阅读更舒适 */
+    margin: 0;
+    padding: 0;
+    background: var(--bg-color);
+    color: var(--text-color);
+    -webkit-font-smoothing: antialiased; /* 让字体在 Mac 上更清晰 */
+}
+
+/* 链接通用样式 */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+/* =========================================
+   3. 头部导航 (Header & Nav)
+   ========================================= */
+header {
+    background: var(--paper-bg); /* 改为白色背景，更干净 */
+    color: var(--primary-color);
+    padding: 0;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    position: sticky; /* 让导航栏吸顶 */
+    top: 0;
+    z-index: 100;
+    border-top: 5px solid var(--primary-color); /* 顶部装饰条 */
+}
+
+header h1 {
+    margin: 0;
+    padding: 20px 0 10px;
+    font-size: 2.2rem;
+    font-family: var(--font-sans); /* 标题用无衬线体，显得现代 */
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0 0 20px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* 使用 gap 代替 margin，间距更稳定 */
+}
+
+header nav ul li a {
+    color: #7f8c8d;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+/* 导航栏下划线动画 */
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent-color);
+    transition: width 0.3s;
+}
+
+header nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+header nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* =========================================
+   4. 主体内容 (Main Layout)
+   ========================================= */
+main {
+    padding: 40px 20px;
+    max-width: 900px; /* 稍微加宽一点 */
+    margin: 0 auto;
+}
+
+/* 列表页标题 */
+main h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 标题下的小装饰 */
+main h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--accent-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* =========================================
+   5. 文章卡片 (Article Cards) - 列表页
+   ========================================= */
+article {
+    background: var(--paper-bg);
+    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 12px; /* 圆角更柔和 */
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(0,0,0,0.05); /* 极细的边框代替粗边框 */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+article:hover {
+    transform: translateY(-5px); /* 上浮效果 */
+    box-shadow: var(--shadow-lg); /* 阴影加深 */
+    border-color: transparent;
+}
+
+article h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+article h3 a {
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    font-family: var(--font-serif);
+    font-weight: 700;
+    background-image: linear-gradient(120deg, transparent 0%, transparent 100%, transparent 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0px;
+    background-position: 0 100%;
+    transition: background-size 0.3s;
+}
+
+/* 标题悬停时的荧光笔效果 */
+article h3 a:hover {
+    color: var(--primary-color);
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    background-size: 100% 40%; /* 只显示下半部分 */
+}
+
+article p {
+    margin-top: 10px;
+    font-size: 1.05rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* =========================================
+   6. 文章详情页 Markdown 样式覆盖 (Markdown Override)
+   关键！让 github-markdown.css 服从你的设计
+   ========================================= */
+.markdown-body {
+    background-color: var(--paper-bg) !important;
+    font-family: var(--font-serif) !important; /* 强制使用衬线体 */
+    color: var(--text-color) !important;
+    box-shadow: var(--shadow-md);
+    border-radius: 8px;
+    padding: 40px !important; /* 增加内边距 */
+}
+
+/* 手机端适配内边距 */
+@media (max-width: 767px) {
+    .markdown-body {
+        padding: 20px !important;
+    }
+}
+
+.markdown-body h1, 
+.markdown-body h2, 
+.markdown-body h3 {
+    border-bottom: none !important; /* 去掉GitHub风格的下划线 */
+    color: var(--primary-color);
+    font-family: var(--font-sans); /* 标题可以用无衬线体形成对比 */
+}
+
+.markdown-body blockquote {
+    border-left: 4px solid var(--accent-color) !important;
+    background: #f9f9f9;
+    color: #555 !important;
+}
+
+.markdown-body a {
+    color: var(--accent-color) !important;
+}
+
+/* =========================================
+   7. 页脚 (Footer)
+   ========================================= */
+footer {
+    background: var(--paper-bg);
+    color: #999;
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 60px;
+    border-top: 1px solid #eee;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    font-family: var(--font-sans);
+}
+
+/* =========================================
+   8. 返回按钮 (Back Link)
+   ========================================= */
+.back-link {
+    display: inline-block;
+    margin: 20px auto;
+    font-weight: bold;
+    font-family: var(--font-sans);
+    color: #999;
+}
+.back-link:hover {
+    color: var(--primary-color);
+    transform: translateX(-5px); /* 向左动一下 */
+    display: inline-block; /* 必须block才能transform */
+}
+
+/* =========================================
+   博客列表 - 日期元数据样式
+   ========================================= */
+
+.post-meta {
+    font-family: var(--font-sans); /* 使用无衬线体，数字更清晰 */
+    font-size: 0.85rem;            /* 字号要比正文小 */
+    color: #95a5a6;                /* 浅灰色，不抢标题风头 */
+    margin-top: -5px;              /* 拉近与标题的距离 */
+    margin-bottom: 12px;           /* 与摘要保持距离 */
+    display: flex;                 /* 让两个日期横向排列 */
+    gap: 15px;                     /* 两个日期之间的间距 */
+    align-items: center;
+}
+
+/* 针对每一个日期块 */
+.post-meta span {
+    display: inline-flex;
+    align-items: center;
+}
+
+/* 如果你想针对“更新时间”做特殊颜色（比如橙色提醒） */
+.date-upd {
+    color: var(--accent-color, #e67e22); /* 使用之前定义的强调色，或者默认橙色 */
+    background: rgba(230, 126, 34, 0.1); /* 极淡的背景 */
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* 手机端适配：如果屏幕太窄，日期这就自动换行 */
+@media (max-width: 600px) {
+    .post-meta {
+        flex-direction: column; /* 垂直排列 */
+        align-items: flex-start;
+        gap: 5px;
+    }
+}
+/* 博客列表头部：标题和排序按钮并排 */
+.blog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--accent-color); /* 标题下方的装饰线移到这里 */
+    padding-bottom: 10px;
+}
+
+.blog-header h2 {
+    margin: 0;
+    border: none; /* 去掉原本 h2 的装饰 */
+    text-align: left;
+    transform: none;
+    left: auto;
+}
+.blog-header h2::after { display: none; } /* 去掉原本的小横线 */
+
+/* 排序下拉框样式 */
+.sort-controls {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.sort-controls select {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    font-family: var(--font-sans);
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+/* 手机适配：垂直排列 */
+@media (max-width: 600px) {
+    .blog-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}

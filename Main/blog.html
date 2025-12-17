@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog - Personal Website">
+    <title>Blog List</title>
+    <link rel="stylesheet" href="../styles/styles.blog.css">
+</head>
+
+<body>
+    <header>
+        <h1>My Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <section>
+        <div class="blog-header">
+            <h2>Latest Posts</h2>
+            
+            <div class="sort-controls">
+                <label for="sort-select">Sort by:</label>
+                <select id="sort-select">
+                    <option value="newest">📅 Newest First</option>
+                    <option value="oldest">📅 Oldest First</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="blog-posts-container">
+            </div>
+    </section>
+</main>
+    <footer>
+        <p>&copy; 2025 CLMatt. All rights reserved.</p>
+    </footer>
+
+    <script src="../javascript/post.js"></script>
+<script>
+
+    const container = document.getElementById('blog-posts-container');
+    const sortSelect = document.getElementById('sort-select');
+
+    // 2. 渲染函数：把数据变成 HTML
+    function renderPosts(posts) {
+        container.innerHTML = ''; // 先清空容器
+
+        posts.forEach(post => {
+            // 构建 HTML 字符串
+            const articleHTML = `
+                <article>
+                    <h3>
+                        <a href="article.html?id=${post.id}">${post.title}</a>
+                    </h3>
+                    <div class="post-meta">
+                        <span class="date-pub">
+                            📅 发布于: <time>${post.date}</time>
+                        </span>
+                        ${post.update ? `<span class="date-upd">🔄 更新于: <time>${post.update}</time></span>` : ''}
+                    </div>
+                    <p>${post.desc}</p>
+                </article>
+            `;
+            // 插入到页面
+            container.insertAdjacentHTML('beforeend', articleHTML);
+        });
+    }
+
+    // 3. 排序函数
+    function sortPosts(criteria) {
+        // 复制一份数据，以免修改原数组
+        const sortedPosts = [...blogData];
+
+        if (criteria === 'newest') {
+            // 按日期降序 (新的在前)
+            sortedPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+        } else if (criteria === 'oldest') {
+            // 按日期升序 (旧的在前)
+            sortedPosts.sort((a, b) => new Date(a.date) - new Date(b.date));
+        }
+
+        renderPosts(sortedPosts);
+    }
+
+    // 4. 事件监听：当下拉菜单变化时，重新排序
+    sortSelect.addEventListener('change', (e) => {
+        sortPosts(e.target.value);
+    });
+
+    // 5. 页面加载时，默认执行一次“最新优先”排序
+    sortPosts('newest');
+
+</script>
+
+</body>
+</html>
