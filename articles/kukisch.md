@@ -1,26 +1,26 @@
 # 🦅 Project DK-1: Kukisch (库克语)
 
-**发布:** 2023-10-01 | **最后更新:** 2023-12-15
+**发布:** 2025-12-17 | **最后更新:** 2025-12-17
 
 > **📁 文档编号:** K.u.K-Manual-1918-Alpha
 > **🏛️ 归属部门:** 帝国战争部 (Kriegsministerium)
-> **🔒 密级:** 仅限现役军人 (For Service Use Only)
+> **🔒 密级:** 中尉以上
 
 
 
-## 📖 1. 简介 (Introduction)
+## 📖 1. 简介
 
-**Kukisch** (Danubis-Kukisch) 是为奥匈帝国皇家军队设计的标准化辅助语。
-它的核心设计哲学是：**像德国人一样吼叫，像斯拉夫人一样断句。**
+**Kukisch** (Danubis/Kukisch) 是为奥匈帝国（架空设定）军队设计的标准化辅助语。
+它的核心设计哲学是：**使多民族、人种的帝国军队沟通无障碍，达到高效下令的目的。**
 
-### 核心三铁律 (The 3 Core Rules)
+### 核心三铁律
 1.  **名词不变格：** 依靠前置词 `De` / `Des` 区分单复数。
 2.  **动词统一化：** 所有动词后缀均为 `-ir`，无视人称。
 3.  **发音硬化：** 废除变音符号 (`ü`, `ö`)，强化辅音。
 
 
 
-## 🗣️ 2. 语音系统 (Phonology)
+## 🗣️ 2. 语音系统
 
 为了确保无线电和战场喊话的清晰度，所有发音必须 **“硬化”** 。
 
@@ -28,39 +28,39 @@
 | :--- | :--- | :--- | :--- |
 | **ü** (M**ü**de) | **i** / **u** | 读作 "i" 或 "u" | `Mudi` (累) |
 | **ö** (Sch**ö**n) | **e** | 读作 "Eh" | `Shen` (美) |
-| **W** (Wasser) | **V** | 重读 V 音 | `Vasser` (水) |
+| **W** (Was) | **V** | 重读 V 音 | `Vas` (什么) |
 | **Pf** (Pferd) | **F** | 简化爆破音 | `Ferd` (马) |
-| **Z** (Zeit) | **Ts** | 统一读作 "Ts" | `Tsait` (时间) |
+| **Z** (Zeit) | **Ts** | 统一读作 "Ts" | `Tsait` <br><small>*(拼写仍保持 Zeit)*</small> |
 
 
 
-## 🧱 3. 语法架构 (Grammar Grid)
+## 🧱 3. 语法架构
 
-### 3.1 名词与限定词 (Nouns)
-名词永远保持原形。
+### 3.1 名词与限定词
+名词永远保持原形，避免出现德语的不规则复数变化。
 
 | 功能 | 标记词 (Marker) | 语法结构 | 示例 |
 | :--- | :--- | :--- | :--- |
 | **单数** | `De` | `De` + 名词 | `De Soldat` (那个士兵) |
 | **复数** | `Des` | `Des` + 名词 | `Des Soldat` (那些士兵) |
-| **属格** | `Fon` | `Fon` + 对象 | `Fon de Kaisar` (皇帝的) |
+| **属格** | `Fon` | `Fon` + 对象 | `Fon DER KAISER` <br><small>*(皇帝专属必须大写)*</small> |
 | **指代** | `Dat` | 独立使用 | `Dat ist gut` (那很好) |
 
-### 3.2 动词时态 (Verbs)
-无需背诵变位表，只需记住后缀。
+### 3.2 动词时态
+无需背诵变位表，只需记住后缀。尽可能简化时态，目前该辅助语的使用场景仅限于军官下指令和日常沟通。
 
 * **现在时 / 命令:** 词根 + `-ir` → `Marschir!` (行军！)
 * **过去时:** 词根 + `-ir` + `volt` → `Mi essir-volt` (我吃过了)
 * **将来 / 意愿:** `Vilat` + 原形 → `Mi vilat slafir` (我想睡觉)
 * **否定:** `Nix` + 动词 → `Nix schiesir!` (别开枪！)
 
-### 3.3 形容词 (Adjectives)
+### 3.3 形容词
 * **比较级:** `Mehr` + 形容词 → `Mehr stark` (更强)
 * **最高级:** `Ober` + 形容词 → `Ober stark` (最强)
 
 
 
-## 👮 4. 代词与阶级礼仪 (Protocol)
+## 👮 4. 代词与阶级礼仪
 
 Kukisch 严格反映军队阶级。误用代词将受到军法处置。
 
@@ -80,9 +80,9 @@ Kukisch 严格反映军队阶级。误用代词将受到军法处置。
 
 
 
-## 🔢 5. 数字与通讯 (Signals)
+## 🔢 5. 数字与通讯
 
-为了最大辨识度，采用了混合词源数字系统。
+为了最大辨识度，采用了混合词源数字系统。疑似现实的军队斯拉夫语也使用了这种方式。
 
 * **0-10:** `Nul`, `Ains`, `Dva`, `Tri`, `Fir`, `Pet`, `Zeks`, `Ziben`, `Acht`, `Noin`, `Deset`
 * **逻辑:** 大数 + 小数
@@ -93,42 +93,42 @@ Kukisch 严格反映军队阶级。误用代词将受到军法处置。
 
 
 
-## 📚 6. 核心词汇库 (Vocabulary)
+## 📚 6. 核心词汇库
 
 <details>
 <summary>👉 <b>点击展开完整词汇表 (Click to Expand)</b></summary>
 
 ### ⚔️ 战斗 (Kampf)
-| Kukisch | 源词 | 含义 |
+| Kukisch | 词源 | 含义 |
 | :--- | :--- | :--- |
 | `Gever` | Gewehr | 步枪 |
 | `Kanoni` | Kanone | 大炮 |
 | `Patroni` | Patrone | 子弹/弹药 |
-| `Faint` | Feind | 敌人 |
+| `Vrag` | vrag | 敌人 |
 | `Fraint` | Freund | 友军 |
 | `Graben` | Graben | 战壕 |
 | `Zektor` | Sektor | 区域 |
 | `Foier` | Feuer | 开火 |
 
 ### 🍞 生活 (Leben)
-| Kukisch | 源词 | 含义 |
+| Kukisch | 词源 | 含义 |
 | :--- | :--- | :--- |
 | `Voda` | Voda | 水 (斯拉夫) |
 | `Krumpli` | Krumpli | 土豆 (匈牙利) |
-| `Chleb` | Chleb | 面包 (斯拉夫) |
+| `Lieba` | Chleb | 面包 (斯拉夫) |
 | `Fressir` | Fressen | 吃饭 (粗鲁) |
 | `Slafir` | Schlafen | 睡觉 |
 | `Doktor` | Doktor | 医生 |
 
 ### 🗣️ 常用语 (Phrases)
-| Kukisch | 含义 |
-| :--- | :--- |
-| `Jawohl` | 是/遵命 |
-| `Nix` | 不/没有 |
-| `Kaput` | 坏了/完蛋 |
-| `Schenel` | 快 (Schnell) |
-| `Fertig` | 完毕/结束 |
-| `Achtung` | 注意 |
+| Kukisch | 词源 | 含义 |
+| :--- | :--- |:--- |
+| `Jawohl` |Ja| 是/遵命 |
+| `Nix` |Nicht| 不/没有 |
+| `Kaput` |Kaputt| 坏了/完蛋 |
+| `Schenel` |Schnell)| 快 |
+| `Fertig` |Fertig| 完毕/结束 |
+| `Achtung` |Achtung| 注意 |
 
 ### ❓ 疑问词 (V-Words)
 * `Ver?` (谁)
@@ -141,28 +141,122 @@ Kukisch 严格反映军队阶级。误用代词将受到军法处置。
 </details>
 
 
-## 📝 7. 示例文本 (Sample)
+## 📝 7. 示例文本
 
 **场景:** 1918年11月，前线绝密电报。
 
-> **原文 (Original):**
+> **原文 :**
 >
-> "An Ekselenz, Her Fraint fon mi, Fon Y.
-> **De Front ist kaput.** Des Soldat gehorchir **nix mehr**.
+> "An Ekselenz, Her Fraint fon mi, Fon Salzburg.  
+> De Front ist kaput. Des Soldat gehorchir nix mehr.
 > Eri vilat nix kampfir, eri vilat nur goir an Haus.
-> Mi ist auch mudi. Dat ist ain Tragedie gros.
-> Mi denkir, miri musir **kapitulir**.
+> Mi ist auch mudi. Dat ist ain Tragedie gros.  
+> Mi denkir, miri musir kapitulir.  
 > Fur Austria."
 
-> **译文 (Translation):**
+> **译文 :**
 >
-> 致阁下，我的朋友，冯·Y。
-> **前线已经崩溃。** 士兵们**不再**服从。
+> 致阁下，我的朋友，冯·萨兹堡。  
+> 前线已经崩溃。 士兵们不再服从。
 > 他们不想战斗，他们只想回家。
-> 我也很累。这是一个巨大的悲剧。
-> 我想，我们必须**投降**。
+> 我也很累。这是一个巨大的悲剧。  
+> 我想，我们必须投降。  
 > 为了奥地利。
 
+---
 
-*God Save The Emperor.*
+## 📝 7.1 示例
+
+### ⚔️ 战场指令 (Battle Commands)
+
+*场景：高压环境下的单向命令，要求短促、响亮。省略所有礼貌用语。*
+
+| Kukisch (指令) | 词源/分析 | 含义 (Meaning) |
+| :--- | :--- | :--- |
+| **"Achtung!"** | (德语原词) | **注意！/ 立正！** |
+| **"Forvarts marschir!"** | Vorwärts + -ir | **向前行军！** |
+| **"Haltir! Wer ist dat?"** | Halten + Wer + ist + das | **站住！那是谁？** |
+| **"Ladir des Gever!"** | Laden + Plural + Gewehr | **装填步枪！** |
+| **"Visir... Foier!"** | Visieren + Feuer | **瞄准... 开火！** |
+| **"Maski an! Gas! Gas!"** | Maske + an | **戴上面具！毒气！** |
+| **"Bajonet auf!"** | Bajonett + auf | **上刺刀！** |
+| **"In Graben! Schenel!"** | In + Graben + Schnell | **进战壕！快！** |
+
+---
+
+### 🍞 生存与后勤 (Survival & Logistics)
+
+*场景：战壕内的日常对话，混合了大量斯拉夫语和匈牙利语借词（底层士兵的生活词汇）。*
+
+| Kukisch (口语) | 语法/词源 | 中文译文 |
+| :--- | :--- | :--- |
+| **"Miri habir nix Lieba."** | We + have + no + Bread(斯拉夫) | 我们没有面包了。 |
+| **"Gebir mi Voda."** | Give + me + Water(斯拉夫) | 给我水。 |
+| **"De Krumpli ist kalt."** | The + Potato(匈牙利) + is + cold | 土豆是凉的。 |
+| **"Vi fil Patroni du habir?"** | How + much + Cartridge + you + have | 你还有多少子弹？ |
+| **"Tabak? Tauschir?"** | Tobacco? Exchange? | 有烟吗？换点？ |
+| **"Mi ist mudi. Mi vilat slafir."** | I + is + tired. I + want + sleep | 我累了，我想睡。 |
+| **"Alles ist Scheis."** | Alles + ist + Scheiße | 这就是个烂摊子 (脏话)。 |
+
+---
+
+### 🏥 医疗急救 (Medical & Casualty)
+
+*场景：伤员呼救与简报。*
+
+| Kukisch (呼救) | 语法分析 | 中文译文 |
+| :--- | :--- | :--- |
+| **"Hilfir! Sanitet!"** | Help + Medic | 救命！医护兵！ |
+| **"De Bain fon mi ist kaput."** | The + Leg + of + me + is + broken | 我的腿断了。 |
+| **"Er ist tot."** | He + is + dead | 他死了。 |
+| **"Blut. Fil Blut."** | Blood. Much + Blood | 血，好多血。 |
+| **"Gebir mi Morfin."** | Give + me + Morphine | 给我吗啡。 |
+| **"Er atemir nix mehr."** | He + breathe + no + more | 他没气了。 |
+
+---
+
+### 👮 阶级与汇报 (Hierarchy Protocol)
+
+*场景：严格的上下级对话。违反称谓规则将受军法处置。*
+
+#### ⬇️ 军官对士兵 (Officer to Soldier)
+*使用 "Du" (你) 或直接命令。*
+* **"Soldat, komir hier."** (士兵，过来。)
+* **"Du bist ain Idiot."** (你是个白痴。)
+* **"Machir dat. Sofort!"** (去做这个。立刻！)
+
+#### ⬆️ 士兵对军官 (Soldier to Officer)
+*严禁使用 "Du" 或 "Ir"。必须使用 "Her + 军衔" 或第三人称。*
+* **"Jawohl, Her Major."** (是的，少校先生。)
+* **"Meldir: De Vrag komir fon Links."** (汇报：敌人从左边来了。)
+* **"Her Oberst, miri brauchir Artileri."** (上校先生，我们需要炮击。)
+* **"Zu Befel!"** (遵命/听令！)
+
+---
+
+### 📻 通讯示例 (Radio Transcript)
+
+**场景：** 第4防区请求支援。信号受到干扰。
+
+> **[A]:** "Halo? Halo? Hier ist Zektor Fir."
+> *(喂？喂？这里是第四防区。)*
+>
+> **[B]:** "Hier Zektor Ains. Sprechir."
+> *(这里是一区。请讲。)*
+>
+> **[A]:** "Miri sehir des Vrag. Fil Vrag. In Graben B."
+> *(我们要看见敌人了。很多敌人。在B战壕。)*
+>
+> **[A]:** "Brauchir Artileri. Kordinat: Acht - Ziben - Strich - Dva."
+> *(请求炮击。坐标：87-2。)*
+>
+> **[B]:** "Ferstir-volt. Acht - Ziben - Strich - Dva. Vartir."
+> *(收到了(过去时)。87-2。等着。)*
+>
+> **[A]:** "Schenel! Miri sterbir hier!"
+> *(快点！我们要死在这了！)*
+
+---
+
+*Gott erhalte Franz den Kaiser*  
 *K.u.K. Kriegsministerium, Vienna.*
